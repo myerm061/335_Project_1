@@ -86,6 +86,9 @@ def draw_bars_in_rect(
     screen.blit(font.render(small, True, (185, 185, 185)), (rect.x + 10, rect.y + 30))
     t_text = "time: --" if elapsed_sec is None else f"time: {elapsed_sec:.3f}s"
     screen.blit(font.render(t_text, True, (185, 185, 185)), (rect.x + 10, rect.y + 48))
+    size_text = f"n = {len(arr)}"
+    screen.blit(font.render(size_text, True, (180, 180, 180)), (rect.x + rect.w - 80, rect.y + 8))
+
 
     # bars area inside rect
     pad = 10
@@ -181,8 +184,8 @@ def main():
     x, y = MARGIN, MARGIN
     buttons.append(Button(pygame.Rect(x, y, 140, 40), "Start / Pause", start_pause))
     buttons.append(Button(pygame.Rect(x + 155, y, 100, 40), "Reset", reset))
-    buttons.append(Button(pygame.Rect(x + 270, y, 60, 40), "n -", lambda: change_n(-N_STEP)))
-    buttons.append(Button(pygame.Rect(x + 340, y, 60, 40), "n +", lambda: change_n(+N_STEP)))
+    buttons.append(Button(pygame.Rect(x + 270, y, 60, 40), f"{N_STEP} -", lambda: change_n(-N_STEP)))
+    buttons.append(Button(pygame.Rect(x + 340, y, 60, 40), f"{N_STEP} +", lambda: change_n(+N_STEP)))
     buttons.append(Button(pygame.Rect(x + 420, y, 70, 40), "Speed-", speed_down))
     buttons.append(Button(pygame.Rect(x + 500, y, 70, 40), "Speed+", speed_up))
 
