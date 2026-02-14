@@ -5,6 +5,7 @@
 # - info: short status text
 
 from typing import Generator, List, Tuple
+import random
 
 Step = Tuple[List[int], List[int], str]
 
@@ -29,6 +30,8 @@ def quick_sort_steps(arr: List[int]) -> Generator[Step, None, None]:
     stack = [(0, len(arr) - 1)]
 
     def partition(lo: int, hi: int):
+        pivot_idx = random.randint(lo, hi)
+        arr[pivot_idx], arr[hi] = arr[hi], arr[pivot_idx]
         pivot = arr[hi]
         i = lo
         for j in range(lo, hi):
