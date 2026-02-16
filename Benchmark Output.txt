@@ -1,0 +1,91 @@
+matt@matt-VirtualBox:~$  cd /home/matt ; /usr/bin/env /bin/python3 /home/matt/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher 44355 -- /home/matt/Desktop/335_Project_1/project_code/benchmark.py 
+
+=== mode: random ===
+
+ n=100
+  Bubble: 0.000282 sec
+  Merge : 0.000076 sec
+  Quick : 0.000069 sec
+  Radix : 0.000073 sec
+  Linear: 0.000002 sec
+
+ n=300
+  Bubble: 0.002465 sec
+  Merge : 0.000279 sec
+  Quick : 0.000234 sec
+  Radix : 0.000219 sec
+  Linear: 0.000005 sec
+
+ n=1000
+  Bubble: 0.036772 sec
+  Merge : 0.001053 sec
+  Quick : 0.000832 sec
+  Radix : 0.000836 sec
+  Linear: 0.000018 sec
+
+ n=3000
+  Bubble: 0.332445 sec
+  Merge : 0.004688 sec
+  Quick : 0.003184 sec
+  Radix : 0.002922 sec
+  Linear: 0.000056 sec
+
+=== mode: sorted ===
+
+ n=100
+  Bubble: 0.000107 sec
+  Merge : 0.000058 sec
+  Quick : 0.000042 sec
+  Radix : 0.000075 sec
+  Linear: 0.000002 sec
+
+ n=300
+  Bubble: 0.000915 sec
+  Merge : 0.000198 sec
+  Quick : 0.000130 sec
+  Radix : 0.000249 sec
+  Linear: 0.000005 sec
+
+ n=1000
+  Bubble: 0.017241 sec
+  Merge : 0.001120 sec
+  Quick : 0.000554 sec
+  Radix : 0.001209 sec
+  Linear: 0.000020 sec
+
+ n=3000
+  Bubble: 0.186816 sec
+  Merge : 0.002953 sec
+  Quick : 0.002051 sec
+  Radix : 0.003242 sec
+  Linear: 0.000060 sec
+
+=== mode: reverse ===
+
+ n=100
+  Bubble: 0.000328 sec
+  Merge : 0.000062 sec
+  Quick : 0.000041 sec
+  Radix : 0.000078 sec
+  Linear: 0.000002 sec
+
+ n=300
+  Bubble: 0.002486 sec
+  Merge : 0.000197 sec
+  Quick : 0.000128 sec
+  Radix : 0.000216 sec
+  Linear: 0.000004 sec
+
+ n=1000
+  Bubble: 0.048086 sec
+  Merge : 0.000760 sec
+  Quick : 0.000493 sec
+  Radix : 0.000856 sec
+  Linear: 0.000018 sec
+
+ n=3000
+  Bubble: 0.422189 sec
+  Merge : 0.003315 sec
+  Quick : 0.002045 sec
+  Radix : 0.006918 sec
+  Linear: 0.000061 sec
