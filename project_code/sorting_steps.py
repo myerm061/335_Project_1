@@ -13,15 +13,15 @@ Step = Tuple[List[int], List[int], str]
 def bubble_sort_steps(arr: List[int]) -> Generator[Step, None, None]:
     n = len(arr)
     for i in range(n - 1):
-        swapped = False
+        # swapped = False
         for j in range(0, n - i - 1):
             yield arr, [j, j + 1], f"Bubble: compare {j} vs {j+1}"
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
-                swapped = True
+                # swapped = True
                 yield arr, [j, j + 1], f"Bubble: swap {j} <-> {j+1}"
-        if not swapped:
-            break
+        # if not swapped:
+        #     break
     yield arr, [], "Bubble: done"
 
 
